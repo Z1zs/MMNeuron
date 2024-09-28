@@ -60,61 +60,61 @@ pip install -r requirements.txt
 
 Download the following datasets and put them in directory named "benchs".
 
-### LingoQA
+#### LingoQA
 
 Auto Driving Domain. You can get the dataset [here](https://github.com/wayveai/LingoQA).
 
-### VQAv2
+#### VQAv2
 
 Common Life. You can get the dataset [here](https://visualqa.org/download.html).
 
-### DocVQA
+#### DocVQA
 
 Document VQA. You can get the dataset [here](https://www.docvqa.org/datasets/docvqa) (or huggingface link [here](https://huggingface.co/datasets/pixparse/docvqa-single-page-questions)).
 
-### PMC-VQA
+#### PMC-VQA
 
 Medical VQA. You can get the dataset [here](https://www.docvqa.org/datasets/docvqa).
 
-### RS-VQA(HS)
+#### RS-VQA(HS)
 
 Remote sensing VQA. You can get the dataset [here](https://zenodo.org/records/6344367). 
 
-The final directory should look like:
-├── ad
-│   ├── images
-│   ├── images.zip
-│   ├── train.parquet
-│   └── val
-├── med
-│   ├── figures
-│   ├── images
-│   ├── test_2.csv
-│   ├── test_clean.csv
-│   ├── test.csv
-│   ├── train_2.csv
-│   └── train.csv
-├── rs
-│   ├── Data
-│   ├── USGSanswers.json
-│   ├── USGSimages.json
-│   ├── USGSquestions.json
-│   ├── USGS_split_test_answers.json
-│   ├── USGS_split_test_questions.json
-│   ├── USGS_split_val_answers.json
-│   ├── USGS_split_val_images.json
-│   └── USGS_split_val_questions.json
-└── vqav2
-&emsp;&emsp;├── data
-&emsp;&emsp;├── README.md
-&emsp;&emsp;├── train2014
-&emsp;&emsp;├── v2_mscoco_train2014_annotations.json
-&emsp;&emsp;├── v2_mscoco_val2014_annotations.json
-&emsp;&emsp;├── v2_mscoco_val2014_ansdict.json
-&emsp;&emsp;├── v2_OpenEnded_mscoco_train2014_questions.json
-&emsp;&emsp;├── v2_OpenEnded_mscoco_val2014_questions.json
-&emsp;&emsp;└── val2014
-
+The final directory should look like:   
+├── ad  
+│   ├── images  
+│   ├── images.zip  
+│   ├── train.parquet  
+│   └── val  
+├── med  
+│   ├── figures  
+│   ├── images  
+│   ├── test_2.csv  
+│   ├── test_clean.csv  
+│   ├── test.csv  
+│   ├── train_2.csv  
+│   └── train.csv  
+├── rs  
+│   ├── Data  
+│   ├── USGSanswers.json  
+│   ├── USGSimages.json     
+│   ├── USGSquestions.json      
+│   ├── USGS_split_test_answers.json      
+│   ├── USGS_split_test_questions.json      
+│   ├── USGS_split_val_answers.json      
+│   ├── USGS_split_val_images.json      
+│   └── USGS_split_val_questions.json     
+└── vqav2     
+&emsp;        ├── data     
+&emsp;        ├── README.md  
+&emsp;        ├── train2014  
+&emsp;        ├── v2_mscoco_train2014_annotations.json    
+&emsp;        ├── v2_mscoco_val2014_annotations.json     
+&emsp;        ├── v2_mscoco_val2014_ansdict.json    
+&emsp;        ├── v2_OpenEnded_mscoco_train2014_questions.json     
+&emsp;        ├── v2_OpenEnded_mscoco_val2014_questions.json     
+&emsp;        └── val2014     
+   
 ## Neuron Activation
 
 After preparing the data, you can record the activation probability of neurons in LLaVA-Next and InstructBLIP by running the python script:
