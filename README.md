@@ -80,7 +80,7 @@ Medical VQA. You can get the dataset [here](https://www.docvqa.org/datasets/docv
 
 Remote sensing VQA. You can get the dataset [here](https://zenodo.org/records/6344367). 
 
-The final directory should look like:   
+**The final directory should look like:**   
 ├── ad  
 │   ├── images  
 │   ├── images.zip  
@@ -134,7 +134,7 @@ After getting the activation probability, you can identifying the domain-specifi
 python identify.py -m llava -d lang
 ```
 
-For LLaVA-Next, the options of '-d' are ['lang','vision','mmproj'].
+For LLaVA-Next, the options of '-d' are ['lang','vision','mmproj'].   
 For InstructBLIP, the options of '-d' are ['lang','encoder','qformer','query'].
 
 ## Generation
