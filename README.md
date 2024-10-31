@@ -173,3 +173,9 @@ to investigate the hidden states of intermedia layers.
   year={2024}
 }
 ```
+
+## Star History
+
+<a href="https://star-history.com/#Z1zs/MMNeuron&Date">
+  <img src="https://api.star-history.com/svg?repos=Z1zs/MMNeuron&type=Date" alt="Star History Chart" style="width: 50%;" />
+</a>
