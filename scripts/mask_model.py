@@ -198,7 +198,7 @@ def reset_dict(_model, md_flag):
 def llava_change_forward(masks, _model, result):
     language_num_layers = _model.language_model.config.num_hidden_layers
     vision_num_layers = _model.vision_tower.config.num_hidden_layers
-    # mask
+    # log
     for i in range(language_num_layers):
         obj = _model.language_model.model.layers[i].mlp
         obj.forward = MethodType(llava_factory(None, i, "llama", result), obj)
@@ -208,6 +208,8 @@ def llava_change_forward(masks, _model, result):
     obj = _model.multi_modal_projector
     obj.forward = MethodType(llava_factory(None, 0, "mmproj", result), obj)
     # mask
+    if masks is None:
+        return None
     if "lang" in masks:
         for i, layer_mask in enumerate(masks['lang']):
             obj = _model.language_model.model.layers[i].mlp
@@ -241,7 +243,9 @@ def blip_change_forward(masks, _model, result):
 
         obj = _model.qformer.encoder.layer[i].intermediate_query
         obj.forward = MethodType(blip_factory(None, i, "query", result), obj)
-
+    # mask
+    if masks is None:
+        return None
     if "lang" in masks:
         for i, layer_mask in enumerate(masks['lang']):
             obj = _model.language_model.model.layers[i].mlp
